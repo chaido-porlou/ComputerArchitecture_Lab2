@@ -178,7 +178,7 @@
 
 Οι τιμές L1, L2, a και cl παίρνουν τις τιμές [1,2,3], [1,2,4,8], [1,2,4,8] και [1,2,4] αντίστοιχα, και αποτελούν την αυθαίρετη μονάδα κόστους που επιλέξαμε.  
 
-[![image](https://www.linkpicture.com/q/Screenshot_1_201.png)](https://www.linkpicture.com/view.php?img=LPic5fcd1913d35d4642075323)
+[![Screenshot-1.png](https://i.postimg.cc/zXCg786V/Screenshot-1.png)](https://postimg.cc/F7Kzs594)
 
 Από τη βιβλιογραφία γνωρίζουμε πως μεγαλύτερο μέγεθος cache αντιστοιχεί σε σημαντικότερο κόστος. Επιπροσθέτως, μεγαλύτερο associativity επίσης αντιστοιχεί σε μεγαλύτερο κόστος, καθώς με την αύξηση του αυξάνεται η πολυπλοκότητα και χρειάζεται μεγαλύτερος αριθμός λογικών πυλών. Από τις πληροφορίες που συγκεντρώσαμε, θεωρήσαμε ότι αύξηση του μεγέθους του cache line οδηγεί και αυτή σε αύξηση κόστους.
 
@@ -208,7 +208,7 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_6_74.png)](https://www.linkpicture.com/view.php?img=LPic5fcd2c94550ea292126733)
+ [![Screenshot-2.png](https://i.postimg.cc/9QcqNsH1/Screenshot-2.png)](https://postimg.cc/fJgLV2L0)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **1.625068**, τιμή σημαντικά συγκρίσιμη με την βέλτιστη περίπτωση (**1.600745**), αλλά με πολύ μικρότερο κόστος.
 
@@ -226,7 +226,7 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_3_88.png)](https://www.linkpicture.com/view.php?img=LPic5fcd292d75af1906695887)
+ [![Screenshot-3.png](https://i.postimg.cc/1zjnXtnY/Screenshot-3.png)](https://postimg.cc/NyRfPQx1)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **1.085023**, τιμή σημαντικά συγκρίσιμη με την βέλτιστη περίπτωση (**1.084049**), αλλά με πολύ μικρότερο κόστος. 
 
@@ -244,7 +244,7 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_4_72.png)](https://www.linkpicture.com/view.php?img=LPic5fcd292d75af1906695887)
+[![Screenshot-4.png](https://i.postimg.cc/JnHykLj7/Screenshot-4.png)](https://postimg.cc/62w6kFHF)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **6.809691**, τιμή ίδια με την βέλτιστη περίπτωση (**6.809691**).  
 
@@ -262,7 +262,7 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_5_51.png)](https://www.linkpicture.com/view.php?img=LPic5fcd292d75af1906695887)
+[![Screenshot-5.png](https://i.postimg.cc/J0bGp5T9/Screenshot-5.png)](https://postimg.cc/30x8RmQB)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **2.581555**, τιμή σημαντικά συγκρίσιμη με την βέλτιστη περίπτωση (**2.576960**), αλλά με αρκετά μικρότερο κόστος.
 
