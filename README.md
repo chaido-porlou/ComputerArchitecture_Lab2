@@ -124,13 +124,13 @@
 
 **Benchmark 1: 401.bzip2**
 
-[![image](https://www.linkpicture.com/q/bzip-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-l1.png](https://i.postimg.cc/3x8LhSHJ/bzip-l1.png)](https://postimg.cc/tYcdtzTL)
 
-[![image](https://www.linkpicture.com/q/bzip-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-l2.png](https://i.postimg.cc/Wb69QRCH/bzip-l2.png)](https://postimg.cc/hfvbdYSL)
 
-[![image](https://www.linkpicture.com/q/bzip-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-assoc.png](https://i.postimg.cc/ry4ZNRJc/bzip-assoc.png)](https://postimg.cc/rz898m3Y)
 
-[![image](https://www.linkpicture.com/q/bzip-cache-line.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-cache-line.png](https://i.postimg.cc/HsCZZWZM/bzip-cache-line.png)](https://postimg.cc/rzQNzTLy)
 
 **Benchmark 2: 429.mcf**
 
