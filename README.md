@@ -83,9 +83,9 @@
 
 [![image.png](https://i.postimg.cc/PfBstk6f/image.png)](https://postimg.cc/DmdYgRkR)
 
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-1_20.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc194721e01056591372)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-2_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1c61a2db28463699)
+[![CPI.png](https://i.postimg.cc/mhxSKjyR/CPI.png)](https://postimg.cc/kRc8bxHh)[![L1-DCACHE-MISS.png](https://i.postimg.cc/Nf1VB29b/L1-DCACHE-MISS.png)](https://postimg.cc/2VSTx6xB)
 
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-3_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1f7ed0fb367581945)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-4_4.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc227139941150175523)
+[![L1-ICACHE-MISS.png](https://i.postimg.cc/QdhztNcD/L1-ICACHE-MISS.png)](https://postimg.cc/gntstWMt)[![L2-CACHE-MISS.png](https://i.postimg.cc/6pcmGshv/L2-CACHE-MISS.png)](https://postimg.cc/3kyBPcV8)
 
 <u>**ΕΡΩΤΗΜΑ** **3**</u>
 
