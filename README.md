@@ -81,7 +81,7 @@
 
 Παρατηρούμε ότι τα miss rates στην L1 icache είναι πολύ χαμηλά, καθώς και ότι στα δύο μεγάλα benchmarks τα miss rates της L2 είναι σημαντικά υψηλά.
 
-[image.png](https://postimg.cc/DmdYgRkR)
+![image.png](https://postimg.cc/DmdYgRkR)
 
 [![image](https://www.linkpicture.com/q/Webp.net-resizeimage-1_20.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc194721e01056591372)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-2_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1c61a2db28463699)
 
