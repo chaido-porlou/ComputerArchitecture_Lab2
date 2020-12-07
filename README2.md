@@ -81,11 +81,11 @@
 
 Παρατηρούμε ότι τα miss rates στην L1 icache είναι πολύ χαμηλά, καθώς και ότι στα δύο μεγάλα benchmarks τα miss rates της L2 είναι σημαντικά υψηλά.
 
-![image](https://www.linkpicture.com/q/Webp.net-resizeimage-5_2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc268a58d81537118458)
+![](https://www.linkpicture.com/q/Webp.net-resizeimage-5_2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc268a58d81537118458)
 
-![image](https://www.linkpicture.com/q/Webp.net-resizeimage-1_20.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc194721e01056591372)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-2_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1c61a2db28463699)
+![](https://www.linkpicture.com/q/Webp.net-resizeimage-1_20.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc194721e01056591372)![](https://www.linkpicture.com/q/Webp.net-resizeimage-2_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1c61a2db28463699)
 
-![image](https://www.linkpicture.com/q/Webp.net-resizeimage-3_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1f7ed0fb367581945)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-4_4.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc227139941150175523)
+![](https://www.linkpicture.com/q/Webp.net-resizeimage-3_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1f7ed0fb367581945)![](https://www.linkpicture.com/q/Webp.net-resizeimage-4_4.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc227139941150175523)
 
 <u>**ΕΡΩΤΗΜΑ** **3**</u>
 
