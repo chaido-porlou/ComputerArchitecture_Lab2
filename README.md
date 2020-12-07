@@ -81,11 +81,11 @@
 
 Παρατηρούμε ότι τα miss rates στην L1 icache είναι πολύ χαμηλά, καθώς και ότι στα δύο μεγάλα benchmarks τα miss rates της L2 είναι σημαντικά υψηλά.
 
-[![image.png](https://i.postimg.cc/PfBstk6f/image.png)](https://postimg.cc/DmdYgRkR)
+[![Webp-net-resizeimage-5.png](https://i.postimg.cc/XYNkyrqV/Webp-net-resizeimage-5.png)](https://postimg.cc/ZCgdGK6g)
 
-[![CPI.png](https://i.postimg.cc/mhxSKjyR/CPI.png)](https://postimg.cc/kRc8bxHh)[![L1-DCACHE-MISS.png](https://i.postimg.cc/Nf1VB29b/L1-DCACHE-MISS.png)](https://postimg.cc/2VSTx6xB)
+[![Webp-net-resizeimage-1.png](https://i.postimg.cc/qqfGtQhY/Webp-net-resizeimage-1.png)](https://postimg.cc/Pp4D9WMz)[![Webp-net-resizeimage-2.png](https://i.postimg.cc/mrJYqVwD/Webp-net-resizeimage-2.png)](https://postimg.cc/mc311YKf)
 
-[![L1-ICACHE-MISS.png](https://i.postimg.cc/QdhztNcD/L1-ICACHE-MISS.png)](https://postimg.cc/gntstWMt)[![L2-CACHE-MISS.png](https://i.postimg.cc/6pcmGshv/L2-CACHE-MISS.png)](https://postimg.cc/3kyBPcV8)
+[![Webp-net-resizeimage-3.png](https://i.postimg.cc/FFjyWyJr/Webp-net-resizeimage-3.png)](https://postimg.cc/PN5vN849)[![Webp-net-resizeimage-4.png](https://i.postimg.cc/Bnv2nR7b/Webp-net-resizeimage-4.png)](https://postimg.cc/KRd19p2h)
 
 <u>**ΕΡΩΤΗΜΑ** **3**</u>
 
