@@ -134,33 +134,33 @@
 
 **Benchmark 2: 429.mcf**
 
-[![image](https://www.linkpicture.com/q/mcf-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-l1.png](https://i.postimg.cc/7ZjT9hX8/mcf-l1.png)](https://postimg.cc/0zdQ28Lc)
 
-[![image](https://www.linkpicture.com/q/mcf-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-l2.png](https://i.postimg.cc/D0fW0Xfs/mcf-l2.png)](https://postimg.cc/LY740h16)
 
-[![image](https://www.linkpicture.com/q/mcf-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-assoc.png](https://i.postimg.cc/zvdygG3Q/mcf-assoc.png)](https://postimg.cc/K3McXFP7)
 
-[![image](https://www.linkpicture.com/q/mcf-cache-line.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-cache-line.png](https://i.postimg.cc/Qxt9r1yZ/mcf-cache-line.png)](https://postimg.cc/0rT2YMvV)
 
 **Benchmark 3: 458.sjeng**
 
-[![image](https://www.linkpicture.com/q/sjeng-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf030e53d1593226884)
+[![sjeng-l1.png](https://i.postimg.cc/vZx44MyP/sjeng-l1.png)](https://postimg.cc/pmxWSwp8)
 
-[![image](https://www.linkpicture.com/q/sjeng-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf030e53d1593226884)
+[![sjeng-l2.png](https://i.postimg.cc/JnM0Ykkg/sjeng-l2.png)](https://postimg.cc/sBH3v1K9)
 
-[![image](https://www.linkpicture.com/q/sjeng-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf030e53d1593226884)
+[![sjeng-assoc.png](https://i.postimg.cc/kGh55Yp3/sjeng-assoc.png)](https://postimg.cc/QK1D4mD0)
 
-[![image](https://www.linkpicture.com/q/Picture1_45.png)](https://www.linkpicture.com/view.php?img=LPic5fcd150d9927b1827035289)
+[![sjeng-cache-line.png](https://i.postimg.cc/zXVBQ5yJ/sjeng-cache-line.png)](https://postimg.cc/svCsBkP8)
 
 **Benchmark 4: 470.lbm**
 
-[![image](https://www.linkpicture.com/q/libm-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-l1.png](https://i.postimg.cc/y80VqNsz/libm-l1.png)](https://postimg.cc/mP2xCBPd)
 
-[![image](https://www.linkpicture.com/q/libm-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-l2.png](https://i.postimg.cc/9Mg2PRty/libm-l2.png)](https://postimg.cc/MMBgqGLG)
 
-[![image](https://www.linkpicture.com/q/libm-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-assoc.png](https://i.postimg.cc/Y2VkhFSH/libm-assoc.png)](https://postimg.cc/6TdFPyRj)
 
-[![image](https://www.linkpicture.com/q/libm-cache-line.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-cache-line.png](https://i.postimg.cc/CxCVP6sh/libm-cache-line.png)](https://postimg.cc/TKPSh0sF)
 
 ------
 
