@@ -81,13 +81,11 @@
 
 Παρατηρούμε ότι τα miss rates στην L1 icache είναι πολύ χαμηλά, καθώς και ότι στα δύο μεγάλα benchmarks τα miss rates της L2 είναι σημαντικά υψηλά.
 
-![image](https://www.linkpicture.com/view.php?img=LPic5fcbc268a58d81537118458)
+[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-5_2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc268a58d81537118458)
 
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-1_20.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc194721e01056591372)
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-2_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1c61a2db28463699)
+[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-1_20.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc194721e01056591372)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-2_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1c61a2db28463699)
 
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-3_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1f7ed0fb367581945)
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-4_4.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc227139941150175523)
+[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-3_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1f7ed0fb367581945)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-4_4.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc227139941150175523)
 
 <u>**ΕΡΩΤΗΜΑ** **3**</u>
 
@@ -267,6 +265,14 @@
   [![image](https://www.linkpicture.com/q/Screenshot_5_51.png)](https://www.linkpicture.com/view.php?img=LPic5fcd292d75af1906695887)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **2.581555**, τιμή σημαντικά συγκρίσιμη με την βέλτιστη περίπτωση (**2.576960**), αλλά με αρκετά μικρότερο κόστος.
+
+#### ΚΡΙΤΙΚΗ
+
+Από την παραπάνω εργασία μάθαμε να τρέχουμε benchmarks σε Linux περιβάλλον. Συμπεράναμε ότι δεν επωφελούνται όλα τα benchmarks από τις ίδιες παραμέτρους. Άλλα χρειάζονται μεγάλες chace μνήμες και υψηλό associativity, ενώ άλλα πετυχαίνουν καλύτερο CPI με μικρή cache και direct mapped. Επίσης, πειραματιστήκαμε με διαφορετικό cpu clock και παρατηρήσαμε ότι με αύξηση της συχνότητας, παίρνουμε καλύτερη απόδοση χρόνου, όμως αυτή η αλλαγή στο ρολόι δεν συνεπάγεται τέλειο scaling. Επιπλέον, μπήκαμε στην διαδικασία να δημιουργήσουμε μία δική μας συνάρτηση κόστους και να ερευνήσουμε ποιες παράμετροι επηρεάζουν σε σημαντικότερο βαθμό το CPI, αλλά και τι περικοπές πρέπει να κάνουμε για να διατηρήσουμε μία ισορροπία μεταξύ κόστους και απόδοσης.
+
+Αυτό που μας δυσκόλεψε ήταν η εκτέλεση του benchmark 456.hmmer, το οποίο δεν έτρεξε ούτε σε ubuntu 18 ούτε σε 20 με διαφορετικό σφάλμα στο καθένα, ακόμη και ύστερα από συνεννόηση με τον βοηθό.
+
+Θεωρούμε πως η εργασία ήταν αρκετά χρονοβόρα και από τη στιγμή που καταλάβαμε πως να δουλέψουμε με το πρώτο benchmark, τα υπόλοιπα ήταν επαναλαμβανόμενα. Πιστεύουμε πως θα μπορούσε να επιτευχθεί ο ίδιος μαθησιακός στόχος με τρία benchmarks αντί για πέντε, τα οποία έχουν διαφορές στον τρόπο που επιδρούν οι παράμετροι chace, associativity και  cache line.
 
 ------
 
