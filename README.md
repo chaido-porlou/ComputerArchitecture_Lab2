@@ -150,7 +150,7 @@
 
 [![sjeng-assoc.png](https://i.postimg.cc/kGh55Yp3/sjeng-assoc.png)](https://postimg.cc/QK1D4mD0)
 
-[![screenshot-1.png](https://i.postimg.cc/y8R0w0DY/screenshot-1.png)](https://postimg.cc/ZWT9NBP1)
+[![Picture1.png](https://i.postimg.cc/FFDtLLsR/Picture1.png)](https://postimg.cc/V5rHy5tQ)
 
 **Benchmark 4: 470.lbm**
 
