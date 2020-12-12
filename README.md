@@ -81,11 +81,11 @@
 
 Παρατηρούμε ότι τα miss rates στην L1 icache είναι πολύ χαμηλά, καθώς και ότι στα δύο μεγάλα benchmarks τα miss rates της L2 είναι σημαντικά υψηλά.
 
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-5_2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc268a58d81537118458)
+[![Webp-net-resizeimage-5.png](https://i.postimg.cc/XYNkyrqV/Webp-net-resizeimage-5.png)](https://postimg.cc/ZCgdGK6g)
 
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-1_20.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc194721e01056591372)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-2_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1c61a2db28463699)
+[![Webp-net-resizeimage-1.png](https://i.postimg.cc/qqfGtQhY/Webp-net-resizeimage-1.png)](https://postimg.cc/Pp4D9WMz) [![Webp-net-resizeimage-2.png](https://i.postimg.cc/mrJYqVwD/Webp-net-resizeimage-2.png)](https://postimg.cc/mc311YKf)
 
-[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-3_7.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc1f7ed0fb367581945)[![image](https://www.linkpicture.com/q/Webp.net-resizeimage-4_4.png)](https://www.linkpicture.com/view.php?img=LPic5fcbc227139941150175523)
+[![Webp-net-resizeimage-3.png](https://i.postimg.cc/FFjyWyJr/Webp-net-resizeimage-3.png)](https://postimg.cc/PN5vN849) [![Webp-net-resizeimage-4.png](https://i.postimg.cc/Bnv2nR7b/Webp-net-resizeimage-4.png)](https://postimg.cc/KRd19p2h)
 
 <u>**ΕΡΩΤΗΜΑ** **3**</u>
 
@@ -97,18 +97,9 @@
 
 εξάγουμε το συμπέρασμα ότι η συχνότητα που αντιστοιχεί στο **system.clk_domain.clock** (1000-->1000) παραμένει σταθερή στο 1GHz και στις δύο εκτελέσεις. Αντίθετα, η συχνότητα που αντιστοιχεί στο **system.cpu_clk_domain.clock** (1000-->500), γίνεται 2GHz, όταν εισάγουμε το flag --cpu-clock=2GHz.
 
-Κάνουμε την υπόθεση ότι στην πρώτη περίπτωση το clock αναφέρεται σε όλο το σύστημα, που περιλαμβάνει την cpu, τις caches, καθώς και το system bus. Το clock αυτό παραμένει στο 1GHz και είναι σταθερό. Στην δεύτερη περίπτωση το clock που διαφοροποιείται είναι αυτό της cpu αποκλειστικά. Αν προστεθεί στο σύστημα ακόμα ένας επεξεργαστής, τότε το system clock θα παραμείνει στο 1GHz (ακόμα και τώρα που περιλαμβάνει 2 επεξεργαστές), αλλά η μεμονωμένη συχνότητα του επεξεργαστή (και μόνο) θα είναι και πάλι 2GHz (αν διατηρήσουμε το flag --cpu-clock=2GHz). 
+Κάνουμε την υπόθεση ότι στην πρώτη περίπτωση στο σύστημα χρησιμοποιείται μόνο μία CPU, η οποία και χρονίζεται στο 1GHz. Στην δεύτερη περίπτωση, η CPU συνεχίζει να χρονίζεται στο 1GHz, αλλά προστίθεται ακόμη μία, το οποίο μας οδηγεί στο αποτέλεσμα των 2GHz (το οποίο αναμέναμε με την αλλαγή του flag). Αν αλλάζαμε το flag σε --cpu-clock=3GHz, εικάζουμε πως θα προστεθεί ακόμα μία -χρονισμένη στο 1GHz- CPU στο cluster.
 
-Παρατηρώντας τους χρόνους εκτέλεσης των benchmarks, βλέπουμε πως δεν υπάρχει τέλειο scaling. Δεν φαίνεται, δηλαδή, ο χρόνος να μειώνεται στο μισό όταν διπλασιάζουμε τη συχνότητα. Παρατηρούμε όμως ότι σε κάποια benchmarks είναι αρκετά κοντά. Το παραπάνω μπορεί να οφείλεται στο ότι όταν αυξάνουμε σημαντικά την ταχύτητα του επεξεργαστή είναι πιθανό να μην μειώνεται γραμμικά ο χρόνος περάτωσης του προγράμματος, διότι η CPU καταλήγει να είναι πολύ γρηγορότερη από τα υπόλοιπα στοιχεία του συστήματος, συνεπώς πρέπει σε κάποια σημεία να "περιμένει". Παραθέτουμε παρακάτω τους χρόνους εκτέλεσης των benchmark και στις δύο περιπτώσεις.
-
-|           |  1 GHz   |  2 GHz   | decrease (%) |
-| :-------: | :------: | :------: | :----------: |
-| 401.bzip2 | 0.160703 | 0.083847 |  91.66219%   |
-|  429.mcf  | 0.109233 | 0.055471 |  96.91911%   |
-| 458.sjeng | 0.705453 | 0.513819 |  37.29601%   |
-|  470.lbm  | 0.262248 | 0.174779 |  50.04548%   |
-
-Παρατηρούμε ότι σε κάποια benchmarks (πχ 401.bzip2 & 429.mcf ) υπάρχει σχεδόν τέλειο scaling, με σχεδόν 100% αύξηση της απόδοσης. Αντίθετα, στα δύο τελευταία δεν παρατηρείται τόσο μεγάλη αύξηση της απόδοσης. Συγκεκριμένα, στο 458.sjeng ο χρόνος εκτέλεσης μειώνεται μόνο κατά 37%.
+Παρατηρώντας τους χρόνους εκτέλεσης των benchmarks, βλέπουμε πως δεν υπάρχει τέλειο scaling. Δεν φαίνεται, δηλαδή, ο χρόνος να μειώνεται στο μισό όταν διπλασιάζουμε τη συχνότητα. Το παραπάνω μπορεί να οφείλεται στο προαναφερθέν cluster των CPUs, το οποίο συνηθίζεται να έχει private L1 caches και shared L2 caches, κάτι το οποίο μπορεί να έχει ως αποτέλεσμα την καθυστέρηση εκτέλεσης του προγράμματος. Επιπροσθέτως, όταν αυξάνουμε σημαντικά την ταχύτητα του επεξεργαστή είναι πιθανό να μην μειώνεται γραμμικά ο χρόνος περάτωσης του προγράμματος, διότι η CPU καταλήγει να είναι πολύ γρηγορότερη από τα υπόλοιπα στοιχεία του συστήματος, συνεπώς πρέπει σε κάποια σημεία να "περιμένει".
 
 ------
 
@@ -133,43 +124,43 @@
 
 **Benchmark 1: 401.bzip2**
 
-[![image](https://www.linkpicture.com/q/bzip-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-l1.png](https://i.postimg.cc/3x8LhSHJ/bzip-l1.png)](https://postimg.cc/tYcdtzTL)
 
-[![image](https://www.linkpicture.com/q/bzip-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-l2.png](https://i.postimg.cc/Wb69QRCH/bzip-l2.png)](https://postimg.cc/hfvbdYSL)
 
-[![image](https://www.linkpicture.com/q/bzip-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-assoc.png](https://i.postimg.cc/ry4ZNRJc/bzip-assoc.png)](https://postimg.cc/rz898m3Y)
 
-[![image](https://www.linkpicture.com/q/bzip-cache-line.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbce82ec7e59829001)
+[![bzip-cache-line.png](https://i.postimg.cc/HsCZZWZM/bzip-cache-line.png)](https://postimg.cc/rzQNzTLy)
 
 **Benchmark 2: 429.mcf**
 
-[![image](https://www.linkpicture.com/q/mcf-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-l1.png](https://i.postimg.cc/7ZjT9hX8/mcf-l1.png)](https://postimg.cc/0zdQ28Lc)
 
-[![image](https://www.linkpicture.com/q/mcf-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-l2.png](https://i.postimg.cc/D0fW0Xfs/mcf-l2.png)](https://postimg.cc/LY740h16)
 
-[![image](https://www.linkpicture.com/q/mcf-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-assoc.png](https://i.postimg.cc/zvdygG3Q/mcf-assoc.png)](https://postimg.cc/K3McXFP7)
 
-[![image](https://www.linkpicture.com/q/mcf-cache-line.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbe3648838900739147)
+[![mcf-cache-line.png](https://i.postimg.cc/Qxt9r1yZ/mcf-cache-line.png)](https://postimg.cc/0rT2YMvV)
 
 **Benchmark 3: 458.sjeng**
 
-[![image](https://www.linkpicture.com/q/sjeng-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf030e53d1593226884)
+[![sjeng-l1.png](https://i.postimg.cc/vZx44MyP/sjeng-l1.png)](https://postimg.cc/pmxWSwp8)
 
-[![image](https://www.linkpicture.com/q/sjeng-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf030e53d1593226884)
+[![sjeng-l2.png](https://i.postimg.cc/JnM0Ykkg/sjeng-l2.png)](https://postimg.cc/sBH3v1K9)
 
-[![image](https://www.linkpicture.com/q/sjeng-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf030e53d1593226884)
+[![sjeng-assoc.png](https://i.postimg.cc/kGh55Yp3/sjeng-assoc.png)](https://postimg.cc/QK1D4mD0)
 
-[![image](https://www.linkpicture.com/q/Picture1_45.png)](https://www.linkpicture.com/view.php?img=LPic5fcd150d9927b1827035289)
+[![Picture1.png](https://i.postimg.cc/FFDtLLsR/Picture1.png)](https://postimg.cc/V5rHy5tQ)
 
 **Benchmark 4: 470.lbm**
 
-[![image](https://www.linkpicture.com/q/libm-l1.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-l1.png](https://i.postimg.cc/y80VqNsz/libm-l1.png)](https://postimg.cc/mP2xCBPd)
 
-[![image](https://www.linkpicture.com/q/libm-l2.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-l2.png](https://i.postimg.cc/9Mg2PRty/libm-l2.png)](https://postimg.cc/MMBgqGLG)
 
-[![image](https://www.linkpicture.com/q/libm-assoc.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-assoc.png](https://i.postimg.cc/Y2VkhFSH/libm-assoc.png)](https://postimg.cc/6TdFPyRj)
 
-[![image](https://www.linkpicture.com/q/libm-cache-line.png)](https://www.linkpicture.com/view.php?img=LPic5fcbbf7a6d3cf172841470)
+[![libm-cache-line.png](https://i.postimg.cc/CxCVP6sh/libm-cache-line.png)](https://postimg.cc/TKPSh0sF)
 
 ------
 
@@ -187,7 +178,7 @@
 
 Οι τιμές L1, L2, a και cl παίρνουν τις τιμές [1,2,3], [1,2,4,8], [1,2,4,8] και [1,2,4] αντίστοιχα, και αποτελούν την αυθαίρετη μονάδα κόστους που επιλέξαμε.  
 
-[![image](https://www.linkpicture.com/q/Screenshot_1_201.png)](https://www.linkpicture.com/view.php?img=LPic5fcd1913d35d4642075323)
+[![Screenshot-1.png](https://i.postimg.cc/zXCg786V/Screenshot-1.png)](https://postimg.cc/F7Kzs594)
 
 Από τη βιβλιογραφία γνωρίζουμε πως μεγαλύτερο μέγεθος cache αντιστοιχεί σε σημαντικότερο κόστος. Επιπροσθέτως, μεγαλύτερο associativity επίσης αντιστοιχεί σε μεγαλύτερο κόστος, καθώς με την αύξηση του αυξάνεται η πολυπλοκότητα και χρειάζεται μεγαλύτερος αριθμός λογικών πυλών. Από τις πληροφορίες που συγκεντρώσαμε, θεωρήσαμε ότι αύξηση του μεγέθους του cache line οδηγεί και αυτή σε αύξηση κόστους.
 
@@ -198,8 +189,6 @@
 Όσον αφορά το CPI, αποφασίσαμε να θεωρήσουμε μία σχετικά αυθαίρετη τιμή του, χρησιμοποιώντας τον μέσο όρο τεσσάρων περιπτώσεων κάθε φορά, από τα προϋπολογισμένα CPI του βήματος 2. Με αυτό τον τρόπο βρίσκουμε μία τιμή CPI για καθέναν από τους 144 διαφορετικούς συνδυασμούς L1, L2, associativity, cache line size, η οποία αντιστοιχεί σε μία τιμή κόστους f.
 
 Ο υπολογισμός του κόστους f και του αντίστοιχου CPI υλοποιήθηκε μέσω του κώδικα MATLAB που συνοδεύει την αναφορά. Το αποτέλεσμα αυτού μας δίνει έναν πίνακα, η κάθε σειρά του οποίου περιλαμβάνει μία τιμή κόστους f, ένα CPI, και τιμές μέσω των οποίων βρίσκουμε τις παραμέτρους κάθε περίπτωσης (αρχείο excel "COST RESULTS"). 
-
-
 
 Κάνοντας sort τον πίνακα με τις τιμές του κόστους σε αύξουσα σειρά, βλέπουμε πως η ελάχιστη και μέγιστη τιμή είναι 1 και 5.3. Θεωρούμε ως threshold κόστους την τιμή 3.3 (λίγο μεγαλύτερη του μέσου 3.15) και στη συνέχεια βρίσκουμε το μικρότερο cpi από τα εναπομείναντα. Οι τιμές των παραμέτρων που αντιστοιχούν στο cpi αυτό (μπλε χρώμα) είναι αυτές που βελτιστοποιούν την απόδοση του συστήματος σε σχέση με το κόστος. Με κίτρινο χρώμα φαίνεται το καλύτερο (αυθαίρετο) cpi, το οποίο αντιστοιχεί στις παραμέτρους που ήδη βρήκαμε στο βήμα 2. 
 
@@ -219,7 +208,7 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_6_74.png)](https://www.linkpicture.com/view.php?img=LPic5fcd2c94550ea292126733)
+ [![Screenshot-2.png](https://i.postimg.cc/9QcqNsH1/Screenshot-2.png)](https://postimg.cc/fJgLV2L0)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **1.625068**, τιμή σημαντικά συγκρίσιμη με την βέλτιστη περίπτωση (**1.600745**), αλλά με πολύ μικρότερο κόστος.
 
@@ -237,7 +226,7 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_3_88.png)](https://www.linkpicture.com/view.php?img=LPic5fcd292d75af1906695887)
+ [![Screenshot-3.png](https://i.postimg.cc/1zjnXtnY/Screenshot-3.png)](https://postimg.cc/NyRfPQx1)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **1.085023**, τιμή σημαντικά συγκρίσιμη με την βέλτιστη περίπτωση (**1.084049**), αλλά με πολύ μικρότερο κόστος. 
 
@@ -255,7 +244,7 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_4_72.png)](https://www.linkpicture.com/view.php?img=LPic5fcd292d75af1906695887)
+[![Screenshot-4.png](https://i.postimg.cc/JnHykLj7/Screenshot-4.png)](https://postimg.cc/62w6kFHF)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **6.809691**, τιμή ίδια με την βέλτιστη περίπτωση (**6.809691**).  
 
@@ -273,25 +262,15 @@
 
 - cache line = 128
 
-  [![image](https://www.linkpicture.com/q/Screenshot_5_51.png)](https://www.linkpicture.com/view.php?img=LPic5fcd292d75af1906695887)
+[![Screenshot-5.png](https://i.postimg.cc/J0bGp5T9/Screenshot-5.png)](https://postimg.cc/30x8RmQB)
 
 Στην πραγματική εκτέλεση, χρησιμοποιώντας τις παραπάνω παραμέτρους, το cpi είναι **2.581555**, τιμή σημαντικά συγκρίσιμη με την βέλτιστη περίπτωση (**2.576960**), αλλά με αρκετά μικρότερο κόστος.
-
-------
-
-#### ΒΙΒΛΙΟΓΡΑΦΙΑ
-
-[www.spec.org/cpu2006/](https://www.spec.org/cpu2006/)
-
-Σημειώσεις μαθήματος Αρχιτεκτονικής Υπολογιστών (elearning)
-
-------
 
 #### ΚΡΙΤΙΚΗ
 
 Από την παραπάνω εργασία μάθαμε να τρέχουμε benchmarks σε Linux περιβάλλον. Συμπεράναμε ότι δεν επωφελούνται όλα τα benchmarks από τις ίδιες παραμέτρους. Άλλα χρειάζονται μεγάλες chace μνήμες και υψηλό associativity, ενώ άλλα πετυχαίνουν καλύτερο CPI με μικρή cache και direct mapped. Επίσης, πειραματιστήκαμε με διαφορετικό cpu clock και παρατηρήσαμε ότι με αύξηση της συχνότητας, παίρνουμε καλύτερη απόδοση χρόνου, όμως αυτή η αλλαγή στο ρολόι δεν συνεπάγεται τέλειο scaling. Επιπλέον, μπήκαμε στην διαδικασία να δημιουργήσουμε μία δική μας συνάρτηση κόστους και να ερευνήσουμε ποιες παράμετροι επηρεάζουν σε σημαντικότερο βαθμό το CPI, αλλά και τι περικοπές πρέπει να κάνουμε για να διατηρήσουμε μία ισορροπία μεταξύ κόστους και απόδοσης.
 
-Αυτό που μας δυσκόλεψε ήταν η εκτέλεση του benchamer 456.hmmer, το οποίο δεν έτρεξε ούτε σε ubuntu 18 ούτε σε 20 με διαφορετικό σφάλμα στο καθένα, ακόμη και ύστερα από συνεννόηση με τον βοηθό.
+Αυτό που μας δυσκόλεψε ήταν η εκτέλεση του benchmark 456.hmmer, το οποίο δεν έτρεξε ούτε σε ubuntu 18 ούτε σε 20 με διαφορετικό σφάλμα στο καθένα, ακόμη και ύστερα από συνεννόηση με τον βοηθό.
 
 Θεωρούμε πως η εργασία ήταν αρκετά χρονοβόρα και από τη στιγμή που καταλάβαμε πως να δουλέψουμε με το πρώτο benchmark, τα υπόλοιπα ήταν επαναλαμβανόμενα. Πιστεύουμε πως θα μπορούσε να επιτευχθεί ο ίδιος μαθησιακός στόχος με τρία benchmarks αντί για πέντε, τα οποία έχουν διαφορές στον τρόπο που επιδρούν οι παράμετροι chace, associativity και  cache line.
 
@@ -330,4 +309,3 @@
 ├── CPI RESULTS.xlsx		#cpi results for step 2 diagrams               
 └── README.md                    
 ```
-
